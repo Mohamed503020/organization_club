@@ -15,6 +15,8 @@ import { LastMatchResultComponent } from './components/last-match-result/last-ma
 import { NewsCardComponent } from './components/news-card/news-card.component';
 import { NextMatchComponent } from './components/next-match/next-match.component';
 import { LeagueTableComponent } from './components/league-table/league-table.component';
+import { VideoCarouselComponent } from './components/video-carousel/video-carousel.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { LeagueTableComponent } from './components/league-table/league-table.com
     LastMatchResultComponent,
     NewsCardComponent,
     NextMatchComponent,
-    LeagueTableComponent
+    LeagueTableComponent,
+    VideoCarouselComponent,
+    BlogPostComponent
   ],
   imports: [
     CommonModule,

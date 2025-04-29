@@ -1,0 +1,45 @@
+<!-- app-video-carousel.component.html -->
+<div class="video-carousel">
+  <div class="container">
+    <div class="video-carousel__header">
+      <h2 class="video-carousel__title">Videos</h2>
+      <div class="video-carousel__controls">
+        <button class="video-carousel__nav-button" (click)="previousSlide()">
+          <i class="pi pi-chevron-left"></i>
+        </button>
+        <button class="video-carousel__nav-button" (click)="nextSlide()">
+          <i class="pi pi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <p-carousel
+      [value]="videos"
+      [numVisible]="4"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      styleClass="video-carousel__slider">
+      <ng-template let-video pTemplate="item">
+        <div class="video-carousel__item">
+          <div class="video-carousel__thumbnail">
+            <img [src]="video.thumbnailUrl" [alt]="video.title" class="video-carousel__image img-fluid h-100" >
+            <button class="video-carousel__play-button">
+              <i class="pi pi-play"></i>
+            </button>
+          </div>
+          <h3 class="video-carousel__item-title">{{ video.title }}</h3>
+        </div>
+      </ng-template>
+    </p-carousel>
+
+    <div class="video-carousel__indicators">
+      <span
+        *ngFor="let dot of videos; let i = index"
+        class="video-carousel__indicator"
+        [ngClass]="{'video-carousel__indicator--active': currentSlide === i}"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+  </div>

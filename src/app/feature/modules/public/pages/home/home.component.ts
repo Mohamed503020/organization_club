@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogPost } from '../../components/blog-post/blog-post.component';
 
 @Component({
   selector: 'app-home',
@@ -58,4 +59,22 @@ export class HomeComponent {
     { position: 6, team: 'Giliwice League', wins: 22, draws: 3, losses: 2, points: 140 },
     { position: 7, team: 'Cornika', wins: 22, draws: 3, losses: 2, points: 140 },
     { position: 8, team: 'Gravity Smash', wins: 22, draws: 3, losses: 2, points: 140 }]
+    blogTitle = 'Our Blog';
+  
+    blogPosts: BlogPost[] = [
+      {
+        id: 1,
+        date: 'May 20, 2020',
+        title: 'Romolu to stay at Real Nadrid?',
+        summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.',
+        imageUrl: '/images/players/player_1.jpeg'
+      },
+      {
+        id: 2,
+        date: 'May 20, 2020',
+        title: 'Romolu to stay at Real Nadrid?',
+        summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.',
+        imageUrl: '/images/players/player_2.jpeg'
+      }
+    ];
 }

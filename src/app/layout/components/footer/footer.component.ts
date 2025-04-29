@@ -6,49 +6,47 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  sponsors: string[] = [
-    '/images/snipes.png',
-    '/images/qatar.png',
-    '/images/all.png',
-    '/images/ooredoo.png',
-    '/images/visit-rwanda.png',
-    '/images/qnb.png',
-    '/images/bein.png',
-    '/images/ea-sports.png',
-    '/images/aspetar.png',
-    '/images/parions.png',
-    '/images/bitpanda.png',
-  ];
-
-  links = [
+  currentYear: number = new Date().getFullYear();
+  
+  navCategories = [
     {
-      title: 'Le Canon Sportif de Yaoundé ',
-      items: ['Equipe première', 'Féminines', 'Handball',  'Club', 'Fondation',  'Partenaires'],
+      title: 'News',
+      links: [
+        { name: 'All', url: '/news/all' },
+        { name: 'Club News', url: '/news/club' },
+        { name: 'Media Center', url: '/news/media' },
+        { name: 'Video', url: '/news/video' },
+        { name: 'RSS', url: '/news/rss' }
+      ]
     },
     {
-      title: 'SERVICES',
-      items: ['Mon compte', 'Billetterie', 'Boutique',  'Stadium Tour'],
+      title: 'Tickets',
+      links: [
+        { name: 'Online Ticket', url: '/tickets/online' },
+        { name: 'Payment and Prices', url: '/tickets/payment' },
+        { name: 'Contact & Booking', url: '/tickets/contact' },
+        { name: 'Tickets', url: '/tickets' },
+        { name: 'Coupon', url: '/tickets/coupon' }
+      ]
     },
     {
-      title: 'LANGUES',
-      items: ['Français', 'English', 'Português', 'Español', 'العربية', 'Bahasa Indonesia'],
+      title: 'Matches',
+      links: [
+        { name: 'Standings', url: '/matches/standings' },
+        { name: 'World Cup', url: '/matches/world-cup' },
+        { name: 'La Liga', url: '/matches/la-liga' },
+        { name: 'Hyper Cup', url: '/matches/hyper-cup' },
+        { name: 'World League', url: '/matches/world-league' }
+      ]
     },
     {
-      title: 'AIDE',
-      items: ['Mentions légales', 'Données personnelles', 'CGV', 'Cookies', "Centre d'aide", 'Carrières'],
-    },
-  ];
-
-  socialIcons: string[] = [
-    'facebook-f',
-    'instagram',
-    'x-twitter',
-    'youtube',
-    'snapchat-ghost',
-    'tiktok',
-    'percent',
-    'whatsapp',
-    'twitch',
-    'discord',
+      title: 'Social',
+      links: [
+        { name: 'Twitter', url: 'https://twitter.com' },
+        { name: 'Facebook', url: 'https://facebook.com' },
+        { name: 'Instagram', url: 'https://instagram.com' },
+        { name: 'Youtube', url: 'https://youtube.com' }
+      ]
+    }
   ];
 }
