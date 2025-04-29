@@ -1,0 +1,139 @@
+<!-- login.component.html -->
+
+<div class="login-page">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6">
+        <!-- Login Card -->
+        <div class="login-page__card bg-white shadow rounded">
+          <div class="login-page__header text-center p-4">
+            <h2 class="login-page__title">SECCOR Club</h2>
+            <p class="login-page__subtitle">Member Login</p>
+          </div>
+
+          <div class="login-page__body p-4">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-page__form">
+              <!-- Email Field -->
+              <div class="login-page__form-group mb-4">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="p-input-icon-left w-100">
+                  <i class="pi pi-envelope"></i>
+                  <input
+                    pInputText
+                    id="email"
+                    formControlName="email"
+                    class="login-page__input w-100"
+                    [ngClass]="{'ng-invalid ng-dirty': formControls['email'].touched && formControls['email'].invalid}"
+                    placeholder="your@email.com">
+                </div>
+                <small *ngIf="formControls['email'].touched && formControls['email'].invalid" class="p-error">
+                  Please enter a valid email address
+                </small>
+              </div>
+
+              <!-- Password Field -->
+              <div class="login-page__form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="p-input-icon-left w-100">
+                  <i class="pi pi-lock"></i>
+                  <input
+                    pInputText
+                    id="password"
+                    formControlName="password"
+                    [type]="showPassword ? 'text' : 'password'"
+                    class="login-page__input w-100"
+                    [ngClass]="{'ng-invalid ng-dirty': formControls['password'].touched && formControls['password'].invalid}"
+                    placeholder="••••••••">
+                  <button
+                    pButton
+                    type="button"
+                    icon="pi pi-eye"
+                    class="p-button-text p-button-rounded login-page__show-password-btn"
+                    [class.active]="showPassword"
+                    (click)="togglePasswordVisibility()"
+                    tabindex="-1">
+                  </button>
+                </div>
+                <small *ngIf="formControls['password'].touched && formControls['password'].invalid" class="p-error">
+                  Password must be at least 8 characters
+                </small>
+              </div>
+
+              <!-- Remember Me & Forgot Password -->
+              <div class="login-page__options d-flex justify-content-between align-items-center mb-4">
+                <div class="login-page__remember">
+                  <p-checkbox
+                    formControlName="rememberMe"
+                    [binary]="true"
+                    inputId="rememberMe">
+                  </p-checkbox>
+                  <label for="rememberMe" class="ms-2">Remember me</label>
+                </div>
+
+                <div class="login-page__forgot">
+                  <a
+                    href="javascript:void(0)"
+                    class="login-page__link"
+                    (click)="onForgotPassword()">
+                    Forgot password?
+                  </a>
+                </div>
+              </div>
+
+              <!-- Login Button -->
+              <div class="login-page__actions">
+                <p-button
+                  type="submit"
+                  label="Login"
+                  icon="pi pi-sign-in"
+                  iconPos="right"
+                  styleClass="login-page__login-btn w-100"
+                  [loading]="loading">
+                </p-button>
+              </div>
+            </form>
+
+            <!-- Divider -->
+            <div class="login-page__divider d-flex align-items-center my-4">
+              <div class="flex-grow-1 border-top"></div>
+              <span class="px-3 text-muted">OR</span>
+              <div class="flex-grow-1 border-top"></div>
+            </div>
+
+            <!-- Social Login -->
+            <div class="login-page__social-login">
+              <p-button
+                styleClass="p-button-outlined p-button-secondary w-100 mb-3"
+                label="Continue with Google"
+                icon="pi pi-google">
+              </p-button>
+
+              <p-button
+                styleClass="p-button-outlined p-button-secondary w-100"
+                label="Continue with LinkedIn"
+                icon="pi pi-linkedin">
+              </p-button>
+            </div>
+          </div>
+
+          <div class="login-page__footer p-4 text-center">
+            <p class="login-page__register-text mb-0">
+              Don't have an account?
+              <a href="#" class="login-page__link">Register Now</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div class="login-page__security-notice text-center mt-4">
+          <p class="mb-0">
+            <i class="pi pi-shield me-2"></i>
+            Your connection to SECCOR Club is secure
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p-toast></p-toast>
+</div>

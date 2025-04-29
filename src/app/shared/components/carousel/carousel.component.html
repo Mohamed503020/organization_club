@@ -1,0 +1,26 @@
+<p-carousel
+  [value]="items"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="5000"
+  class="carousel"
+>
+  <ng-template pTemplate="item" let-item>
+    <div
+      class="carousel__slide" 
+      [ngStyle]="{ 'background-image': 'url(' + item.img + ')' }"  
+    >
+      <div class="carousel__overlay"></div>
+      <div class="carousel__content">
+        <p class="carousel__text">{{ item.p }}</p>
+        <button
+          pButton
+          class="carousel__button"
+          type="button"
+          label="{{ item.button }}"
+        ></button>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

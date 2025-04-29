@@ -1,0 +1,46 @@
+<div class="slider">
+    <div class="slider__arrow slider__arrow--left">
+      <i class="pi pi-chevron-left"></i>
+    </div>
+  
+    <div class="slider__content">
+      <ng-container *ngIf="isLoading; else loadedContent">
+        <p-skeleton class="slider__line" width="180px" height="10px"></p-skeleton>
+        <p-skeleton class="slider__line" width="220px" height="8px"></p-skeleton>
+        <p-skeleton class="slider__line" width="240px" height="8px"></p-skeleton>
+        <p-skeleton class="slider__line" width="160px" height="8px"></p-skeleton>
+      </ng-container>
+  
+      <ng-template #loadedContent>
+        <div class="slider__line slider__line--text">Welcome to the slider!</div>
+        <div class="slider__line slider__line--text">Angular + SCSS + PrimeNG</div>
+        <div class="slider__line slider__line--text">Responsive and Clean Design</div>
+        <div class="slider__line slider__line--text">Let’s build something great</div>
+      </ng-template>
+    </div>
+  
+    <div class="slider__arrow slider__arrow--right">
+      <i class="pi pi-chevron-right"></i>
+    </div>
+    <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template #header>
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+          </tr>
+      </ng-template>
+      <ng-template #body let-product>
+          <tr>
+              <td>{{ product.code }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+  </div>
+
+
+  

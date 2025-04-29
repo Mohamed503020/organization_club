@@ -1,0 +1,181 @@
+// Main Contact Page Container
+.contact {
+  &__hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/basketball-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__content {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+  }
+
+  // Form Section Styling
+  &__form {
+    &-section {
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    &-divider {
+      width: 70px;
+      height: 3px;
+      background-color: #e41e26;
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    &-input, &-textarea {
+      border-radius: 0;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: #e41e26;
+      }
+    }
+
+    &-submit {
+      background-color: #e41e26;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-weight: 600;
+      border-radius: 0;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: darken(#e41e26, 10%);
+      }
+    }
+  }
+
+  // Info Section Styling
+  &__info {
+    &-section {
+      padding-left: 30px;
+      
+      @media (max-width: 991px) {
+        padding-left: 0;
+        margin-top: 40px;
+      }
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 10px;
+      
+      &--map {
+        margin-top: 40px;
+      }
+    }
+
+    &-divider {
+      width: 70px;
+      height: 3px;
+      background-color: #e41e26;
+      margin-bottom: 20px;
+    }
+
+    &-address {
+      margin-bottom: 20px;
+      
+      p {
+        margin-bottom: 5px;
+        color: #666;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    &-icon {
+      margin-right: 10px;
+      color: #e41e26;
+    }
+  }
+
+  &__map {
+    height: 200px;
+    background-color: #ddd;
+    margin-top: 20px;
+  }
+
+  // Social Media Section
+  &__social {
+    padding: 40px 0;
+    background-color: #fff;
+    
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    &-item {
+      margin: 0 10px;
+    }
+    
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #e41e26;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

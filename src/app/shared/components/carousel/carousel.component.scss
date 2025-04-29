@@ -1,0 +1,95 @@
+.carousel {
+  // Force height on all relevant PrimeNG layers
+  ::ng-deep .p-carousel-container,
+  ::ng-deep .p-carousel-content,
+  ::ng-deep .p-carousel-items-content,
+  ::ng-deep .p-carousel-items-container,
+  ::ng-deep .p-carousel-item,
+  ::ng-deep .p-carousel-item > div {
+    width: 100vw !important;
+    height: 650px !important; // ✅ Fixed height
+    max-height: 650px !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Hide bottom dots
+  ::ng-deep .p-carousel-indicators {
+    display: none !important;
+  }
+
+  // Arrows styling (optional)
+  ::ng-deep .p-carousel-prev,
+  ::ng-deep .p-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  ::ng-deep .p-carousel-prev {
+    left: 20px;
+  }
+
+  ::ng-deep .p-carousel-next {
+    right: 20px;
+  }
+
+  // Slide with background image
+  &__slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Overlay layer
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(100, 100, 100, 0.5);
+    z-index: 1;
+  }
+
+  // Content container
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    background-color: #e91e63;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #c2185b;
+    }
+  }
+}
