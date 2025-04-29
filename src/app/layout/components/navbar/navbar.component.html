@@ -1,70 +1,18 @@
-<header class="psg-header">
-    <!-- Top Navigation -->
-    <div class="psg-header__top-bar d-flex justify-content-start px-4">
-      <ul class="psg-header__nav nav">
-        <li class="psg-header__nav-item nav-item" *ngFor="let link of topNavLinks">
-          <a
-  class="nav-link"
-  [routerLink]="link.route"
-  routerLinkActive="nav-link--active"
-  [routerLinkActiveOptions]="{ exact: true }"
-  aria-current="page"
->
-  {{ link.name }}
-</a>
-        </li>
-      </ul>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">SOCCER<sup>TM</sup></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item" *ngFor="let item of navItems">
+            <a [href]="item.link" class="header__nav-link" [class.header__nav-link--active]="item.name === 'HOME'">
+              {{item.name}}
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Main Navigation -->
-    <div class="psg-header__main-bar d-flex justify-content-between align-items-center px-4 ">
-      <div class="psg-header__left d-flex align-items-center toggel-menu gap-3">
-        <div class="d-flex align-items-center gap-2" >
-          <i class="pi pi-bars" style="font-size: 1.5rem" *ngIf="!display" (click)="openMenu()" style="cursor: pointer;"></i>
-          <i class="fa-solid fa-xmark" *ngIf="display" (click)="openMenu()" style="cursor: pointer;"></i>
-          <span class="fw-bold">MENU</span>
-        </div>
-
-        <div class="megamenu-wrapper row " *ngIf="display">
-          <div class="category col-12 col-md-3 mt-2" *ngFor="let category of categories">
-            <div style="border-bottom:2px solid #ccc; width:80%; position: relative;" class="mt-3">
-              <h3 [style.borderBottomColor]="category.color" style="position: absolute;
-              left: 0;
-              top: -23px;
-              width: 40%;">
-
-                {{ category.title }}</h3>
-            </div>
-
-            <ul>
-              <li *ngFor="let item of category.items">
-                <a [routerLink]="item.link">{{ item.label }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="psg-header__divider mx-2"></div>
-        <span class="psg-header__link fw-bold">Prochain match</span>
-        <!-- <span class="psg-header__link fw-bold">OnAir</span> -->
-        <button class="psg-header__btn btn fw-bold">OnAir</button>
-
-         <!-- <span class="psg-header__tv badge bg-light text-dark d-flex align-items-center gap-1">
-          <i class="fas fa-play"></i> PSG TV
-        </span> -->
-      </div>
-
-      <div class="psg-header__logo">
-        <img src="/images/players/logo_design_alpha.png" alt="PSG Logo" class="img-fluid" style="width: 70px; height:70px"/>
-      </div>
-
-      <div class="psg-header__right d-flex align-items-center gap-3">
-        <i class="fas fa-search"></i>
-        <div class="psg-header__divider"></div>
-        <i class="fas fa-user"></i>
-        <div class="psg-header__divider"></div>
-        <i class="fas fa-globe"></i>
-      </div>
-</div>
-  </header>
-
+  </div>
+</header>

@@ -32,68 +32,30 @@ export class HomeComponent {
        fgImg: '/images/players/team.jpeg'
     }
   ];
-  mainNews = [
-    {
-      image: '/images/players/player_5.jpeg',
-      category: 'Rencontre du',
-      date: '23 avril 2025',
-      title: 'Le Canon Sportif de Yaoundé : Revivre les moments forts du match '
+  matchData = {
+    homeTeam: {
+      id: 1,
+      name: 'Football League',
+      logo: '/images/players/logo-removebg.png'
     },
-    {
-      image:'/images/players/player_6.jpeg',
-      category: 'Rencontre du',
-      date: '24 avril 2025',
-      title: 'Le Canon Sportif de Yaoundé : un parcours mythique'
+    awayTeam: {
+      id: 2,
+      name: 'Soccer',
+      logo:  '/images/header/cameron-logo.png'
     },
+    league: 'World Cup League',
+    date: new Date('2020-12-20T09:30:00Z'),
+    venue: 'New Euro Arena'
+  };
 
-  ];
-
-  sideNews = [
-    {
-      title: 'Dernière ligne droite',
-      category: 'CLUB',
-      date: 'il y a 13 heures'
-    },
-    {
-      title: 'Le defi est relevé  ',
-      category: 'ÉQUIPE PREMIÈRE',
-      date: '22 avril 2025'
-    },
-    {
-      title: '1er journée du championnat ',
-      category: 'ÉQUIPE PREMIÈRE',
-      date: '22 avril 2025'
-    },
-    {
-      title: 'Match amicals ',
-      category: 'ÉQUIPE PREMIÈRE',
-      date: '22 avril 2025'
-    }
-  ];
-  mostRated = [
-    {
-      image: '/images/players/player_7.jpeg',
-      category: ' Rencontre du',
-      date: '23 avril 2025',
-      title: 'Canon de Yaoundé : Les faits marquants'
-    },
-    {
-      image:'/images/players/player_8.jpeg',
-      category: ' Rencontre du',
-      date: '24 avril 2025',
-      title: 'Canon de Yaoundé : Les préparation'
-    },
-    {
-      image:'/images/players/player_9.jpeg',
-      category: ' Rencontre du',
-      date: '24 avril 2025',
-      title: 'Canon de Yaoundé : solidarité'
-    },
-    {
-      image:'/images/players/player_10.jpeg',
-      category: ' Rencontre du',
-      date: '24 avril 2025',
-      title: 'Canon de Yaoundé : Nos rencontres '
-    }
-  ]
+  // League table data
+  leagueStandings = [
+    { position: 1, team: 'Football League', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 2, team: 'Soccer', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 3, team: 'Juvendo', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 4, team: 'French Football League', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 5, team: 'Legia Abante', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 6, team: 'Giliwice League', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 7, team: 'Cornika', wins: 22, draws: 3, losses: 2, points: 140 },
+    { position: 8, team: 'Gravity Smash', wins: 22, draws: 3, losses: 2, points: 140 }]
 }

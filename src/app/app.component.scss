@@ -1,1 +1,53 @@
 
+@import '../scss/main';
+
+
+// Bootstrap imports
+@import '~bootstrap/scss/bootstrap';
+
+// Custom BEM classes
+.btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  
+  &-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include media-breakpoint-up(sm) {
+    max-width: 540px;
+  }
+  
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
+  }
+  
+  @include media-breakpoint-up(xl) {
+    max-width: 1140px;
+  }
+  
+  @include media-breakpoint-up(xxl) {
+    max-width: 1320px;
+  }
+}

@@ -1,0 +1,39 @@
+<section class="match-result">
+    <div class="container">
+      <div class="match-result__wrapper">
+        <div class="match-result__team match-result__team--home">
+          <div class="match-result__logo">
+            <img src="images/header/cameron-logo.png" alt="LA LEGA Logo" class="match-result__logo-img">
+          </div>
+          <h3 class="match-result__team-name">
+            {{homeTeam.name}} <span class="match-result__team-status">({{homeTeam.status}})</span>
+          </h3>
+          <ul class="match-result__players">
+            <li class="match-result__player" *ngFor="let player of homeTeam.players">
+              {{player.name}} ({{player.goals}})
+            </li>
+          </ul>
+        </div>
+        
+        <div class="match-result__score">
+          <span class="match-result__score-home">{{homeGoals}}</span>
+          <span class="match-result__score-separator">-</span>
+          <span class="match-result__score-away">{{awayGoals}}</span>
+        </div>
+        
+        <div class="match-result__team match-result__team--away">
+          <div class="match-result__logo">
+            <img src="images/players/logo-removebg.png" alt="JUVENDU Logo" class="match-result__logo-img">
+          </div>
+          <h3 class="match-result__team-name">
+            {{awayTeam.name}} <span class="match-result__team-status">({{awayTeam.status}})</span>
+          </h3>
+          <ul class="match-result__players">
+            <li class="match-result__player" *ngFor="let player of awayTeam.players">
+              {{player.name}} ({{player.goals}})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>

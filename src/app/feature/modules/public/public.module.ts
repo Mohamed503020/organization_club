@@ -9,13 +9,25 @@ import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from '../../../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HeroComponent } from './components/hero/hero.component';
+import { CountDowanTimeComponent } from './components/count-dowan-time/count-dowan-time.component';
+import { LastMatchResultComponent } from './components/last-match-result/last-match-result.component';
+import { NewsCardComponent } from './components/news-card/news-card.component';
+import { NextMatchComponent } from './components/next-match/next-match.component';
+import { LeagueTableComponent } from './components/league-table/league-table.component';
 
 
 @NgModule({
   declarations: [
     ContactUsComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    HeroComponent,
+    CountDowanTimeComponent,
+    LastMatchResultComponent,
+    NewsCardComponent,
+    NextMatchComponent,
+    LeagueTableComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,21 @@
+<div class="league-table">
+  <div class="league-table__header">
+    <div class="league-table__header-cell league-table__header-cell--position">P</div>
+    <div class="league-table__header-cell league-table__header-cell--team">Team</div>
+    <div class="league-table__header-cell league-table__header-cell--wins">W</div>
+    <div class="league-table__header-cell league-table__header-cell--draws">D</div>
+    <div class="league-table__header-cell league-table__header-cell--losses">L</div>
+    <div class="league-table__header-cell league-table__header-cell--points">PTS</div>
+  </div>
+
+  <div class="league-table__body">
+    <div class="league-table__row" *ngFor="let standing of standings">
+      <div class="league-table__cell league-table__cell--position">{{ standing.position }}</div>
+      <div class="league-table__cell league-table__cell--team">{{ standing.team }}</div>
+      <div class="league-table__cell league-table__cell--wins">{{ standing.wins }}</div>
+      <div class="league-table__cell league-table__cell--draws">{{ standing.draws }}</div>
+      <div class="league-table__cell league-table__cell--losses">{{ standing.losses }}</div>
+      <div class="league-table__cell league-table__cell--points">{{ standing.points }}</div>
+    </div>
+  </div>
+</div>

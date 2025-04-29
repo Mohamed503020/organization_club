@@ -1,142 +1,68 @@
 
 @import "../../../../scss/variables";
-.psg-header {
-
-  &__nav-item {
-    .nav-link {
-      color: #000;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 5px;
-      transition: all 0.3s ease;
-
-      &--active {
-        // color: $secondary_color;
-        border-top: 3px solid $secondary_color;
-        padding-top: 0.2rem;
-        font-weight: 600;
-        background-color: #0da183;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1.5rem 0;
+  
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__logo {
+    &-link {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      
+      sup {
+        font-size: 0.6rem;
+        top: -0.5em;
       }
     }
   }
-
-    &__top-bar {
-      background-color:$main_color;
-      color: white;
-
-      .nav-link {
-        color: white;
-        font-weight: bold;
-        font-size: 0.85rem;
-        padding: 0.3rem 1rem;
-
-        &:hover {
-        color:$secondary_color
-        }
-      }
-
-
+  
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-
-    &__main-bar {
-      background-color: #fff;
-      border-bottom: 1px solid #151b2d;
+    
+    &-item {
+      margin-left: 2rem;
     }
-
-    &__menu-icon {
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
-    &__menu-label {
-      font-size: 0.9rem;
-    }
-
-    &__link {
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    &__tv {
-      font-size: 0.8rem;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    &__logo {
-      text-align: center;
-    }
-
-    &__right {
-      font-size: 1.1rem;
-
-      i {
-        cursor: pointer;
-      }
-    }
-
-    &__divider {
-      width: 1px;
-      height: 1.2rem;
-      background-color: #ccc;
-    }
-  }
-
-  .megamenu-wrapper {
-
-    background: #f5f6f7;
-    padding: 2rem;
-    position: absolute;
-    // box-shadow : 0 0 10px rgba(0, 0, 0, 0.1);
-    left:12px;
-    top:102px;
-    z-index: 1000;
-    width: 100%;
-
-    .category {
-      min-width: 200px;
-
-      h3 {
-        font-size: 1rem;
-        font-weight: bold;
-        margin: 0;
-        width: fit-content;
-        padding-bottom: 4px;
-        border-bottom: 2px solid;
-        text-transform: uppercase;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 1rem;
-
-        li {
-          margin-bottom: 0.5rem;
-
-          a {
-            text-decoration: none;
-            color: #001f3f;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-
-            &:hover {
-              color: #d6001c;
-              text-decoration: underline;
-            }
-          }
+    
+    &-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+      
+      &:hover, &--active {
+        color: #fff;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
         }
       }
     }
   }
-
- .toggel-menu .fa-brands:before, .toggel-menu .fa-regular:before,  .toggel-menu .fa-solid:before, .toggel-menu .fa:before,
-   .toggel-menu .fab:before,  .toggel-menu .far:before,  .toggel-menu .fas:before{
-    font-size: 20px;
-  }
-.psg-header__btn{
-  background-color: #e91e63 !important;
-  color: white;
-  font-size: 0.9rem;
-  padding: 0.3rem 1rem;
 }

@@ -1,120 +1,20 @@
-<app-carousel [items]="carouselData"></app-carousel>
+  <main class="main">
+    <app-hero></app-hero>
+    <app-last-match-result></app-last-match-result>
+    <app-news-cards></app-news-cards>
+    <div class="soccer-dashboard">
+      <div class="container">
+        <div class="row">
+          <!-- Next Match Component -->
+          <div class="col-md-5">
+            <app-next-match [matchData]="matchData"></app-next-match>
+          </div>
 
-<div class="new_top_news_section  mt-5">
-  <div class="container">
-    <div class="news-section row ">
-        <app-news-card class="col-12 col-md-6 col-lg-4"
-          *ngFor="let item of mainNews"
-          [data]="item"
-          [height]="'400px'"
-        ></app-news-card>
-
-      <div class="news-section__side col-12 col-md-6 col-lg-4 d-flex flex-column px-5 gap-3 ">
-        <ng-container  *ngFor="let item of sideNews">
-        <app-side-news-item
-
-          [data]="item"
-        ></app-side-news-item>
-      </ng-container>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="most-rate mt-4">
-  <div class="container">
-    <div class="most-rate__content row">
-      <div class="col-12 com-md-4 col-lg-3"  *ngFor="let item of mostRated">
-        <app-news-card
-        [data]="item"
-        [height]="'350px'"
-      ></app-news-card>
-      </div>
-
-    </div>
-</div>
-
-<div class="upcoming-events mt-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-12">
-        <img src="/images/players/player_11.jpeg" class="w-100 " alt="">
-      </div>
-    <div class="upcoming-events__list col-md-6 col-12">
-      <div class="upcoming-events__item">
-        <div class="upcoming-events__date">Apr 30</div>
-        <div class="upcoming-events__details">
-          <h3 class="upcoming-events__name">Tech Conference 2025</h3>
-          <p class="upcoming-events__location">San Francisco, CA</p>
+          <!-- League Table Component -->
+          <div class="col-md-7">
+            <app-league-table [standings]="leagueStandings"></app-league-table>
+          </div>
         </div>
       </div>
-      <div class="upcoming-events__item">
-        <div class="upcoming-events__date">May 12</div>
-        <div class="upcoming-events__details">
-          <h3 class="upcoming-events__name">Angular Global Summit</h3>
-          <p class="upcoming-events__location">Online</p>
-        </div>
-      </div>
-      <div class="upcoming-events__item">
-        <div class="upcoming-events__date">Jun 05</div>
-        <div class="upcoming-events__details">
-          <h3 class="upcoming-events__name">Frontend Fest</h3>
-          <p class="upcoming-events__location">Berlin, Germany</p>
-        </div>
-      </div>
-      <div class="upcoming-events__item">
-        <div class="upcoming-events__date">Jun 05</div>
-        <div class="upcoming-events__details">
-          <h3 class="upcoming-events__name">Frontend Fest</h3>
-          <p class="upcoming-events__location">Berlin, Germany</p>
-        </div>
-      </div>
-      <div class="upcoming-events__item">
-        <div class="upcoming-events__date">Jun 05</div>
-        <div class="upcoming-events__details">
-          <h3 class="upcoming-events__name">Frontend Fest</h3>
-          <p class="upcoming-events__location">Berlin, Germany</p>
-        </div>
     </div>
-  </div>
-
-</div>
-</div>
-</div>
-<section class="partners">
-  <div class="partners__list">
-    <h2 class="partners__title text-white mt-3">
-      PARTNER’S LOGO
-    </h2>
-    <!-- <div class="partners__item">
-      <img src="/images/partner/supplier_1.png" alt="Partner 1" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_2.png" alt="Partner 2" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_3.png" alt="Partner 3" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_4.png" alt="Partner 1" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_5.png" alt="Partner 2" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_6.png" alt="Partner 3" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_7.png" alt="Partner 3" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_8.png" alt="Partner 1" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_9.png" alt="Partner 2" class="partners__logo" />
-    </div>
-    <div class="partners__item">
-      <img src="/images/partner/supplier_10.png" alt="Partner 3" class="partners__logo" />
-    </div> -->
-  </div>
-</section>
+  </main>

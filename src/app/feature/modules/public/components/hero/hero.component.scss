@@ -1,0 +1,70 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/players/player_4.jpeg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    
+    &__content {
+      max-width: 600px;
+      margin-left: auto;
+      z-index: 1;
+    }
+    
+    &__title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    &__description {
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+    
+    &__buttons {
+      display: flex;
+      margin-top: 2rem;
+    }
+    
+    &__btn {
+      margin-right: 1rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      
+      &--book {
+        background-color: #e91e63;
+        border-color: #e91e63;
+        
+        &:hover {
+          background-color: darken(#e91e63, 10%);
+          border-color: darken(#e91e63, 10%);
+        }
+      }
+    }
+  }

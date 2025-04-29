@@ -1,0 +1,57 @@
+<div class="next-match">
+  <div class="next-match__header">
+    Next Match
+  </div>
+
+  <div class="next-match__content">
+    <div class="next-match__teams">
+      <div class="next-match__team">
+        <img [src]="matchData.homeTeam.logo" alt="Home Team Logo" class="next-match__team-logo">
+        <div class="next-match__team-name">{{ matchData.homeTeam.name }}</div>
+      </div>
+
+      <div class="next-match__vs">
+        vs
+      </div>
+
+      <div class="next-match__team">
+        <img [src]="matchData.awayTeam.logo" alt="Away Team Logo" class="next-match__team-logo">
+        <div class="next-match__team-name">{{ matchData.awayTeam.name }}</div>
+      </div>
+    </div>
+
+    <div class="next-match__info">
+      <div class="next-match__league">{{ matchData.league }}</div>
+      <div class="next-match__date">{{ matchData.date | date: 'MMMM d\'th\', yyyy' }}</div>
+      <div class="next-match__time">{{ matchData.date | date: 'h:mm a' }} GMT+0</div>
+      <div class="next-match__venue">{{ matchData.venue }}</div>
+    </div>
+
+    <div class="next-match__countdown">
+      <div class="next-match__countdown-item">
+        <div class="next-match__countdown-value">{{ weeks }}</div>
+        <div class="next-match__countdown-label">weeks</div>
+      </div>
+
+      <div class="next-match__countdown-item">
+        <div class="next-match__countdown-value">{{ days < 10 ? '0' + days : days }}</div>
+        <div class="next-match__countdown-label">days</div>
+      </div>
+
+      <div class="next-match__countdown-item">
+        <div class="next-match__countdown-value">{{ hours < 10 ? '0' + hours : hours }}</div>
+        <div class="next-match__countdown-label">hr</div>
+      </div>
+
+      <div class="next-match__countdown-item">
+        <div class="next-match__countdown-value">{{ minutes < 10 ? '0' + minutes : minutes }}</div>
+        <div class="next-match__countdown-label">min</div>
+      </div>
+
+      <div class="next-match__countdown-item">
+        <div class="next-match__countdown-value">{{ seconds < 10 ? '0' + seconds : seconds }}</div>
+        <div class="next-match__countdown-label">sec</div>
+      </div>
+    </div>
+  </div>
+</div>
