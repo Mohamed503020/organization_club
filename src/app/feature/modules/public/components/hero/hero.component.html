@@ -1,16 +1,30 @@
 <section class="hero">
-    <div class="hero__background"></div>
-    <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title">{{title}}</h1>
-        <p class="hero__description">{{description}}</p>
-        
-        <app-count-dowan-time></app-count-dowan-time>
-        
-        <div class="hero__buttons">
-          <button class="btn btn-primary hero__btn hero__btn--book">BOOK TICKET</button>
-          <button class="btn btn-outline-light hero__btn hero__btn--learn">LEARN MORE</button>
-        </div>
-      </div>
+  <div class="hero__background"></div>
+  <div class="container">
+    <div class="hero__content">
+      <p-carousel [value]="slides"
+                 [numVisible]="1"
+                 [numScroll]="1"
+                 [circular]="true"
+                 [autoplayInterval]="5000"
+                 [showNavigators]="true"
+                 [showIndicators]="true">
+        <ng-template let-slide pTemplate="item">
+          <div class="hero-slide">
+            <h1 class="hero__title">{{ slide.title }}</h1>
+            <p class="hero__description">{{ slide.description }}</p>
+            <div class="hero__features">
+              <ul>
+                <li *ngFor="let feature of slide.features">{{ feature }}</li>
+              </ul>
+            </div>
+            <div class="hero__buttons">
+              <button class="hero__btn hero__btn--book">Découvrir</button>
+              <button class="hero__btn">En savoir plus</button>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
     </div>
-  </section>
+  </div>
+</section>
