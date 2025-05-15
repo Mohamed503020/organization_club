@@ -9,11 +9,11 @@ import { MenuItem } from 'primeng/api';
 export class NavbarComponent    {
 
   navItems = [
-    { name: 'HOME', link: '/' },
-    { name: 'MATCHES', link: '/matches' },
-    { name: 'PLAYERS', link: '/players' },
-    { name: 'BLOG', link: '/blog' },
-    { name: 'CONTACT', link: '/contact' }
+    { name: 'Accueil', link: '/' },
+    { name: 'Apropos', link: '/' },
+    { name: ' Nos partenaire ', link: '/' },
+    { name: 'Nos Projets ', link: '/' },
+    { name: 'Contact', link: '/' }
   ];
 
 }
