@@ -1,0 +1,77 @@
+
+$footer-bg: #111111;
+$footer-title-color: #ffffff;
+$footer-link-color: #777777;
+$footer-link-hover-color: #ffffff;
+$footer-copyright-color: #777777;
+$accent-color: #ff0000; // For the heart icon and links on hover
+
+.footer {
+  background-color: $footer-bg;
+  padding: 60px 0 30px;
+  color: $footer-link-color;
+
+  &__category {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: $footer-title-color;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: $footer-link-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $footer-link-hover-color;
+      text-decoration: none;
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__copyright-text {
+    font-size: 0.85rem;
+    color: $footer-copyright-color;
+  }
+
+  &__copyright-icon {
+    color: $accent-color;
+    display: inline-block;
+    margin: 0 3px;
+  }
+
+  &__copyright-link {
+    color: $accent-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($accent-color, 10%);
+    }
+  }
+
+ 
+}

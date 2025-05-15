@@ -1,0 +1,48 @@
+.slider {
+   overflow-x: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+    height: 300px;
+    padding: 0 20px;
+    position: relative;
+  
+    &__arrow {
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+  
+      &--left {
+        position: absolute;
+        left: 10px;
+      }
+  
+      &--right {
+        position: absolute;
+        right: 10px;
+      }
+    }
+  
+    &__content {
+      margin: auto; 
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start; 
+    }
+  
+    &__line { 
+      border-radius: 5px;
+  
+      &--text {
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        min-width: 160px;
+        font-weight: 500;
+      }
+    }
+  }
+  

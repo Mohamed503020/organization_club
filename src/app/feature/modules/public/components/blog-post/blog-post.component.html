@@ -1,0 +1,23 @@
+<section class="blog pt-3">
+    <div class="container">
+      <div class="blog__header">
+        <h3 class="blog__title">{{ sectionTitle }}</h3>
+      </div>
+      
+      <div class="row mt-3">
+        <div class="col-md-6" *ngFor="let post of blogPosts">
+          <div class="blog__card d-flex align-items-center">
+            <div class="blog__card-image">
+              <img [src]="post.imageUrl" [alt]="post.title" >
+            </div>
+            <div class="blog__card-content mx-3">
+              <div class="blog__card-date">{{ post.date }}</div>
+              <h3 class="blog__card-title">{{ post.title }}</h3>
+              <p class="blog__card-summary">{{ post.summary }}</p>
+              <a href="#" class="blog__card-link">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

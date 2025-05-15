@@ -1,0 +1,60 @@
+.canon {
+    background: #000;
+    background-size: cover;
+    padding: 60px 0;
+  
+    &__container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 12px;
+    }
+  
+    &__header {
+      .canon__logo {
+        width: 100px;
+        height: auto;
+      }
+  
+      .canon__title {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+  
+      .canon__subtitle {
+        font-size: 1.25rem;
+      }
+    }
+  
+    &__image {
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+  
+    &__features {
+      .canon__feature {
+        margin-bottom: 20px;
+  
+        .canon__icon {
+          font-size: 1.2rem;
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+  
+        strong {
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+  
+        span {
+          display: block;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  
+    &__footer {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+  

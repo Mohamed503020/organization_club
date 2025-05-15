@@ -1,0 +1,18 @@
+<!-- Menu Overlay -->
+<div
+  class="psg-menu"
+  *ngIf="isMenuVisible"
+  (clickOutside)="closeMenu()"
+>
+  <div class="psg-menu__container">
+    <div class="psg-menu__section" *ngFor="let category of menu">
+      <h5 class="psg-menu__title">{{ category.title }}</h5>
+      <ul class="psg-menu__list">
+        <li *ngFor="let item of category.items" class="psg-menu__item">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

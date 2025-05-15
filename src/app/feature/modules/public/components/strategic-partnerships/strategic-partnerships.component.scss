@@ -1,0 +1,77 @@
+.partnerships {
+  background: url('/images/organize/updated-bg.png') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-color: #000; // fallback color
+  padding: 5rem 0;
+  position: relative;
+    z-index: -1;
+    .content{
+      position: relative;
+      z-index: 2;
+
+    }
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #ddd;
+  }
+}
+
+
+.al-ettifaq {
+  background-color: #000;
+  color: #fff;
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+
+  &__list {
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #eee;
+    }
+  }
+
+  &__text {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+}
+
+.club{
+  background-color: #000;
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem 0;
+  position: relative;
+}

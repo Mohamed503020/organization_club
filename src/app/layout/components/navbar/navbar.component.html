@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">SOCCER<sup>TM</sup></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item" *ngFor="let item of navItems">
+            <a [href]="item.link" class="header__nav-link" [class.header__nav-link--active]="item.name === 'HOME'">
+              {{item.name}}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

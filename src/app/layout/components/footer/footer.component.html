@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let category of navCategories">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer__category">
+            <h2 class="footer__title">{{ category.title }}</h2>
+            <ul class="footer__links">
+              <li class="footer__item" *ngFor="let link of category.links">
+                <a class="footer__link" [routerLink]="link.url">{{ link.name }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="footer__copyright">
+      <p class="footer__copyright-text">
+        Copyright © {{ currentYear }} All rights reserved |  made with 
+        <i class="bi bi-heart-fill footer__copyright-icon"></i> by 
+        <a class="footer__copyright-link" href="https://www.linkedin.com/in/mohammed-el-soudy/" target="_blank"> Elsoudy</a>
+      </p>
+    </div>
+  </div>
+</footer>

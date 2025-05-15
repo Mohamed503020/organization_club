@@ -1,0 +1,91 @@
+
+// Variables
+$primary-color: #f7345d;
+$darker-bg: #1a1a1a;
+$text-color: #ffffff;
+$border-color: #292929;
+
+// League Table Component
+.league-table {
+  background-color: $darker-bg;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+
+  &__header {
+    background-color: $primary-color;
+    color: $text-color;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+  }
+
+  &__header-cell {
+    text-align: center;
+
+    &--position {
+      width: 10%;
+    }
+
+    &--team {
+      width: 40%;
+      text-align: left;
+    }
+
+    &--wins,
+    &--draws,
+    &--losses {
+      width: 10%;
+    }
+
+    &--points {
+      width: 20%;
+    }
+  }
+
+  &__body {
+    padding: 0.5rem 0;
+  }
+
+  &__row {
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+
+    &--position {
+      width: 10%;
+      justify-content: center;
+    }
+
+    &--team {
+      width: 40%;
+    }
+
+    &--wins,
+    &--draws,
+    &--losses {
+      width: 10%;
+      justify-content: center;
+    }
+
+    &--points {
+      width: 20%;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+}
+

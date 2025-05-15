@@ -1,0 +1,39 @@
+<section class="hero">
+  <div class="hero__background"></div>
+  <div class="container">
+    <div class="hero__content">
+      <p-carousel [value]="slides"
+                 [numVisible]="1"
+                 [numScroll]="1"
+                 [circular]="true"
+                 [autoplayInterval]="5000"
+                 [showNavigators]="true"
+                 [showIndicators]="true">
+        <ng-template let-slide pTemplate="item">
+          <div class="hero-slide">
+            <h1 class="hero__title">{{ slide.title }}</h1>
+            <p class="hero__description">{{ slide.description }}</p>
+            <div class="hero__features">
+              <ul>
+                <li *ngFor="let feature of slide.features">{{ feature }}</li>
+              </ul>
+            </div>
+            <!-- <div class="hero__buttons">
+              <button class="hero__btn hero__btn--book">Découvrir</button>
+              <button class="hero__btn">En savoir plus</button>
+            </div> -->
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+          <div class="hero_footer text-center mt-5">
+      <div class="hero_footer__content">
+        <div class="hero_footer__text">
+
+          <h2 class="hero_footer__title">Rejoignez-nous pour une aventure inoubliable !</h2>
+          <p class="hero_footer__description">Explorez le monde avec nous et créez des souvenirs inoubliables.</p>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>

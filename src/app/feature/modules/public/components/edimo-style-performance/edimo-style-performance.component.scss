@@ -1,0 +1,51 @@
+.edimo-bg {
+  background-size: cover;
+  background-image: url('/images/organize/updated-bg.png') ;
+  padding: 1.8rem 1rem;
+  color: white;
+}
+
+.edimo {
+  &__header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__highlight {
+    color: red;
+  }
+
+  &__features {
+    margin-top: 2rem;
+  }
+
+  &__feature-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: transform 0.3s;
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h5 {
+      color: white;
+      margin-top: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  &__feature-img {
+    border-radius: 5px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  &__footer {
+    max-width: 800px;
+    font-size: 1rem;
+  }
+}
+

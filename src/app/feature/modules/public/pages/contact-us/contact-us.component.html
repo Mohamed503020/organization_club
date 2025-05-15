@@ -1,0 +1,66 @@
+<!-- Replace the form section in your HTML with this reactive form implementation -->
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact__form">
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="fullName"
+      class="form-control contact__form-input"
+      placeholder="Full Name*"
+      [ngClass]="{ 'is-invalid': hasError('fullName') }">
+    <div *ngIf="hasError('fullName')" class="invalid-feedback">
+      {{ getErrorMessage('fullName') }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="email"
+      formControlName="email"
+      class="form-control contact__form-input"
+      placeholder="Email*"
+      [ngClass]="{ 'is-invalid': hasError('email') }">
+    <div *ngIf="hasError('email')" class="invalid-feedback">
+      {{ getErrorMessage('email') }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="text"
+      formControlName="subject"
+      class="form-control contact__form-input"
+      placeholder="Subject*"
+      [ngClass]="{ 'is-invalid': hasError('subject') }">
+    <div *ngIf="hasError('subject')" class="invalid-feedback">
+      {{ getErrorMessage('subject') }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <textarea
+      formControlName="message"
+      class="form-control contact__form-textarea"
+      placeholder="Message*"
+      rows="5"
+      [ngClass]="{ 'is-invalid': hasError('message') }"></textarea>
+    <div *ngIf="hasError('message')" class="invalid-feedback">
+      {{ getErrorMessage('message') }}
+    </div>
+  </div>
+
+  <div *ngIf="submitSuccess" class="alert alert-success">
+    Your message has been sent successfully. We'll get back to you soon!
+  </div>
+
+  <div *ngIf="submitError" class="alert alert-danger">
+    There was an error sending your message. Please try again later.
+  </div>
+
+  <button
+    type="submit"
+    class="btn contact__form-submit"
+    [disabled]="submitted">
+    {{ submitted ? 'SENDING...' : 'SUBMIT NOW' }}
+  </button>
+</form>

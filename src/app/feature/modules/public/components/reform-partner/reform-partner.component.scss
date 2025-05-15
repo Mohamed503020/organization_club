@@ -1,0 +1,48 @@
+.partner {
+  background-image: url('/images/organize/updated-bg.png') ;
+  background-size: cover;
+  color: #fff;
+  padding: 60px 0;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: red;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+color:#fff;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__card {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 250;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
