@@ -7,7 +7,7 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item" *ngFor="let item of navItems">
-            <a [routerLink]="item.link" class="header__nav-link" [class.header__nav-link--active]="item.name === 'HOME'">
+            <a  [routerLink]="['/home']" class="header__nav-link" [fragment]="item.fragment" [class.header__nav-link--active]="item.name === 'HOME'">
               {{item.name}}
             </a>
           </li>
