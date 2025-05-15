@@ -22,6 +22,7 @@ import { StrategicPartnershipsComponent } from './components/strategic-partnersh
 import { ReformPartnerComponent } from './components/reform-partner/reform-partner.component';
 import { CanonComponent } from './components/canon/canon.component';
 import { EdimoStylePerformanceComponent } from './components/edimo-style-performance/edimo-style-performance.component';
+import { TalentmapComponent } from './components/talentmap/talentmap.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { EdimoStylePerformanceComponent } from './components/edimo-style-perform
     StrategicPartnershipsComponent,
     ReformPartnerComponent,
     CanonComponent,
-    EdimoStylePerformanceComponent
+    EdimoStylePerformanceComponent,
+    TalentmapComponent
   ],
   imports: [
     CommonModule,
