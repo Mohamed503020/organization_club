@@ -1,0 +1,75 @@
+.contact {
+  color: #fff;
+  background-image: url('/images/organize/updated-bg.png') ;
+  padding: 4rem 0;
+  padding-bottom: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__form-wrapper {
+    padding-right: 2rem;
+  }
+
+  &__form {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  &__input,
+  &__textarea {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+    margin-bottom: 1rem;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+  &__submit {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 5px;
+    background-color: #777;
+    margin: 0 1rem;
+  }
+
+  &__info {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    border-left: 2px solid;
+
+    &-section {
+      margin-bottom: 1.5rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
+
+      h5 {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__footer {
+    font-size: 0.95rem;
+    color: #ddd;
+    line-height: 1.6;
+  }
+}

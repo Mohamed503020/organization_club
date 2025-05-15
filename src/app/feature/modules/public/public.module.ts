@@ -23,6 +23,7 @@ import { ReformPartnerComponent } from './components/reform-partner/reform-partn
 import { CanonComponent } from './components/canon/canon.component';
 import { EdimoStylePerformanceComponent } from './components/edimo-style-performance/edimo-style-performance.component';
 import { TalentmapComponent } from './components/talentmap/talentmap.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { TalentmapComponent } from './components/talentmap/talentmap.component';
     ReformPartnerComponent,
     CanonComponent,
     EdimoStylePerformanceComponent,
-    TalentmapComponent
+    TalentmapComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,
