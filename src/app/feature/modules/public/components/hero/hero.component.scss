@@ -61,18 +61,15 @@
         display: inline-block;
         margin-right: 1rem;
         margin-bottom: 0.5rem;
-        background-color: rgba(233, 30, 99, 0.2);
-        padding: 0.25rem 0.75rem;
-        border-radius: 20px;
         font-size: 0.875rem;
 
-        &:before {
-          content: "•";
-          margin-right: 0.5rem;
-          color: #e91e63;
-        }
       }
+
+    li:last-child .feater_icon {
+      display: none !important;
+        }
     }
+
   }
 
   &__buttons {
