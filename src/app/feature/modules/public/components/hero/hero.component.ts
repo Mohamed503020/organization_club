@@ -3,6 +3,7 @@ interface Slide {
   title: string;
   description: string;
   features: string[];
+  primaryButton:string
 }
 @Component({
   selector: 'app-hero',
@@ -15,12 +16,20 @@ export class HeroComponent {
     {
       title: 'TalentMap - Révélateur de Potentiels',
       description: 'Application innovante développée par AFRISPORT Dynamics pour révolutionner la détection et le suivi des talents sportifs africains.',
-      features: ['Détection', 'Suivi progression', 'Valorisation', 'Mise en relation', 'Analytique']
+      features: ['Détection', 'Suivi progression', 'Valorisation', 'Mise en relation', 'Analytique'],
+      primaryButton: 'En savoir plus'
     },
     {
-      title: 'Foot4Impact - Le Sport au Service du Changement',
-      description: 'Application révolutionnaire développée par AFRISPORT Dynamics pour maximiser et valoriser l\'impact social du football.',
-      features: ['Identification des besoins', 'Mise en relation', 'Pilotage de projets', 'Mesure d\'impact']
+      title: 'Découvrez les talents de demain',
+      description: 'Plateforme complète de gestion des talents sportifs africains avec des outils d\'analyse avancés.',
+      features: ['Scouting', 'Développement', 'Performance', 'Networking', 'Data Analytics'],
+      primaryButton: 'Explorer'
+    },
+    {
+      title: 'Connectez-vous à l\'Afrique sportive',
+      description: 'Accédez à un réseau de clubs, académies et fédérations à travers tout le continent africain.',
+      features: ['Réseau panafricain', 'Opportunités', 'Partenariats', 'Visibilité', 'Croissance'],
+      primaryButton: 'Rejoindre'
     }
   ];
 

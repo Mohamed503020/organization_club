@@ -1,7 +1,9 @@
 @import "../../../../../../scss/main";
+
 .main {
   position: relative;
   overflow: hidden;
+  font-family: "Roboto";
 
 }
 $dark-bg: #121212;
@@ -11,6 +13,7 @@ $dark-bg: #121212;
   background-color: $dark-bg;
   color: #ffffff;
   padding: 2rem 0;
-  font-family: 'Arial', sans-serif;
   min-height: 100vh;
+  font-family: "Roboto";
+
 }

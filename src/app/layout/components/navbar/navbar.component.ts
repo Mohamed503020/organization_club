@@ -7,7 +7,7 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent    {
-
+  isNavOpen=false
   navItems = [
     { name: 'Accueil', link: '/home' ,fragment:"Accueil" },
     { name: 'Apropos', link: '/home', fragment:"Apropos" },

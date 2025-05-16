@@ -1,7 +1,12 @@
 
 @import "./scss/main";
+@import "@fontsource/roboto";
+
 *{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  font-family: "Roboto";
+}
+body{
+  background-color: #000;
 }
 html {
   scroll-behavior: smooth;

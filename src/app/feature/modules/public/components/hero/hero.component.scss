@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  height: 100vh;
   min-height: 700px;
   display: flex;
   align-items: center;
@@ -12,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/organize/main-bg.jpg');
+    background-image: url('/images/bg-updated.png') ;
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -24,27 +23,32 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
     }
   }
 
   &__content {
-    max-width: 100%;
-    margin: auto;
-    width:fit-content;
+    width: fit-content;
+    width: 85% !important;
+    margin: 0 auto;
+    padding-top: 1rem;
     z-index: 1;
+    margin-top: 150px !important;
+    margin-bottom: 230px !important;
   }
 
   &__title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
   }
 
   &__description {
     font-size: 1.125rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.7rem;
     opacity: 0.9;
+    line-height: 40px;
+    max-width: 600px;
   }
 
   &__features {
@@ -73,52 +77,87 @@
 
   &__buttons {
     display: flex;
-    margin-top: 2rem;
   }
 
   &__btn {
-    margin-right: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
     padding: 0.75rem 1.5rem;
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 4px;
+    font-weight: 500;
 
-    &--book {
-      background-color: #e91e63;
-      border-color: #e91e63;
+    &--primary {
+      background-color: transparent;
+      border: 1px solid #fff;
 
       &:hover {
-        background-color: darken(#e91e63, 10%);
-        border-color: darken(#e91e63, 10%);
+        background-color: rgba(255, 255, 255, 0.2);
       }
     }
+  }
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+  &__footer {
+    width: 100%;
+    margin-top: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+
+    hr {
+      margin-top: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+    }
+
+    &-content {
+      display: flex;
+      padding-bottom: 2rem;
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    &-slogan {
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+      }
     }
   }
 }
 
 // PrimeNG Carousel Customization
+.p-carousel .p-carousel-indicators .p-carousel-indicator {
+  display: none;
+}
+
 :host ::ng-deep {
   .p-carousel {
-    position: relative;
-
     .p-carousel-indicators {
       position: absolute;
       bottom: -3rem;
       left: 0;
-
+      right: 0;
+      display: none !important;
+      text-align: center;
+     opacity: 0 !important;
       .p-carousel-indicator button {
         background-color: rgba(255, 255, 255, 0.4);
         width: 12px;
         height: 12px;
         border-radius: 50%;
         transition: all 0.3s ease;
+        margin: 0 4px;
 
         &.p-highlight {
           background-color: #e91e63;
@@ -138,7 +177,6 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       display: flex;
-
       align-items: center;
       justify-content: center;
       cursor: pointer;
@@ -148,22 +186,17 @@
       opacity: 0.7;
 
       &:hover {
-        background-color: #e91e63;
+        background-color: rgba(233, 30, 99, 0.7);
         opacity: 1;
-      }
-
-      .p-carousel-prev-icon,
-      .p-carousel-next-icon {
-        font-size: 1.5rem;
       }
     }
 
     .p-carousel-prev {
-      left: -40px !important;
+      left: -60px;
     }
 
     .p-carousel-next {
-      right: -40px !important;
+      right: -60px;
     }
   }
 
@@ -171,40 +204,49 @@
     padding: 1rem;
   }
 }
-p-carousel .p-carousel-content .p-carousel-prev,
-.p-carousel .p-carousel-content .p-carousel-next {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 40px !important;
-  height: 40px !important;
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  color: #fff !important;
-  border-radius: 50% !important;
-  border: none !important;
-}
-p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
-  margin: 0 30px ;
+.p-carousel .p-carousel-content .p-carousel-prev{
+  margin-right: 50px !important;
 }
 
-// .p-carousel .p-carousel-content .p-carousel-prev:hover,
-// .p-carousel .p-carousel-content .p-carousel-next:hover {
-//   background-color: #e91e63 !important;
-// }
+.p-carousel .p-carousel-content .p-carousel-next{
+margin-left: 50px !important;
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero {
+    &__footer {
+      position: relative;
+      margin-top: 2rem;
 
-// /* Ensure arrows are positioned correctly */
-// .p-carousel .p-carousel-content {
-//   position: relative;
-//   overflow: visible !important;
-// }
+      &-slogan h2 {
+        font-size: 1.5rem;
+      }
 
-// /* Force arrows to be visible */
-// .p-carousel .p-carousel-content button {
-//   display: block !important;
-// }
+      &-title {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
 
-// /* Additional helper class for carousel container */
-// .carousel-container {
-//   position: relative;
-//   padding: 0 30px;
-// }
+    &__content {
+      padding-top: 4rem;
+      width: 100% !important;
+      margin-bottom: 50px !important;
+    }
+    .container_feater{
+      flex-direction: column !important;
+    }
+  }
+
+  :host ::ng-deep {
+    .p-carousel {
+      .p-carousel-prev {
+        left: -20px;
+      }
+
+      .p-carousel-next {
+        right: -20px;
+      }
+    }
+  }
+}

@@ -1,14 +1,30 @@
 <header class="header">
   <div class="container">
     <div class="header__wrapper">
+      <!-- Logo -->
       <div class="header__logo">
-        <a href="/" class="header__logo-link d-flex flex-column "> <span>AFRISPORT</span><span>Dynamics</span></a>
+        <a href="/" class="header__logo-link d-flex flex-column">
+          <span>AFRISPORT</span>
+          <span>Dynamics</span>
+        </a>
       </div>
-      <nav class="header__nav">
+
+      <!-- Mobile Toggle -->
+      <button class="header__toggle" (click)="isNavOpen = !isNavOpen">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav class="header__nav" [class.open]="isNavOpen">
         <ul class="header__nav-list">
           <li class="header__nav-item" *ngFor="let item of navItems">
-            <a  [routerLink]="['/home']" class="header__nav-link" [fragment]="item.fragment" [class.header__nav-link--active]="item.name === 'HOME'">
-              {{item.name}}
+            <a
+              [routerLink]="['/home']"
+              class="header__nav-link"
+              [fragment]="item.fragment"
+              [class.header__nav-link--active]="item.name === 'HOME'"
+            >
+              {{ item.name }}
             </a>
           </li>
         </ul>
